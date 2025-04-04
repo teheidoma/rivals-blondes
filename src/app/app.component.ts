@@ -17,15 +17,23 @@ export class AppComponent implements OnInit {
 
   chars: Char[] = [
     {
-      name: 'sue',
+      name: 'Invisible Woman',
       img: 'sue.png'
     },
     {
-      name: 'dagger',
+      name: 'Cloak & Dagger',
       img: 'cnd.png',
     },
     {
-      name: 'thor',
+      name: 'Hawkeye',
+      img: 'hawk.png'
+    },
+    {
+      name: 'Emma Frost',
+      img: 'emma.png'
+    },
+    {
+      name: 'Thor',
       img: 'thor.png',
     }
   ]
@@ -35,7 +43,6 @@ export class AppComponent implements OnInit {
       this.running = true;
       this.timer = 60;
       let interval = setInterval(() => {
-        console.log("22")
         this.timer -= 1;
         if (this.timer <= 0) {
           clearInterval(interval)
@@ -51,7 +58,6 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.newChar()
-    console.log("char", this.char)
   }
 
   newChar() {
@@ -65,15 +71,11 @@ export class AppComponent implements OnInit {
 
   shuffle(chars: Char[]) {
     let currentIndex = chars.length;
-
-    // While there remain elements to shuffle...
     while (currentIndex != 0) {
 
-      // Pick a remaining element...
       let randomIndex = Math.floor(Math.random() * currentIndex);
       currentIndex--;
 
-      // And swap it with the current element.
       [chars[currentIndex], chars[randomIndex]] = [
         chars[randomIndex], chars[currentIndex]];
     }
