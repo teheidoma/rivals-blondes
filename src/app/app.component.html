@@ -1,0 +1,15 @@
+<div class="h-screen w-screen flex justify-center items-center">
+  <div class="flex flex-col items-center">
+    <div>{{timer}}</div>
+    <div>
+    {{score}}
+    </div>
+    <div>
+    {{ char?.name}}
+    </div>
+    <div class="flex gap-3">
+      @for (char of chars ; track char.name) {
+        <img [src]="char.img" (click)="pick(char)">
+      }</div>
+  </div>
+</div>
