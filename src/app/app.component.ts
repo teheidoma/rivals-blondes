@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
   char?: Char
   score = 0
   running = false
-  timer = 5
+  timer = 30
 
   chars: Char[] = [
     {
@@ -41,7 +41,7 @@ export class AppComponent implements OnInit {
   pick(char: Char) {
     if(this.score == 0 && !this.running) {
       this.running = true;
-      this.timer = 60;
+      this.timer = 30;
       let interval = setInterval(() => {
         this.timer -= 1;
         if (this.timer <= 0) {
@@ -80,6 +80,8 @@ export class AppComponent implements OnInit {
         chars[randomIndex], chars[currentIndex]];
     }
   }
+
+  protected readonly document = document;
 }
 
 
