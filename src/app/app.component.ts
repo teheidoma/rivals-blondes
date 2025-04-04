@@ -18,15 +18,15 @@ export class AppComponent implements OnInit {
   chars: Char[] = [
     {
       name: 'sue',
-      img: 'sue.webp'
+      img: 'sue.png'
     },
     {
       name: 'dagger',
-      img: 'cnd.webp',
+      img: 'cnd.png',
     },
     {
       name: 'thor',
-      img: 'thor.webp',
+      img: 'thor.png',
     }
   ]
 
