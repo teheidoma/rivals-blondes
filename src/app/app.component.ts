@@ -82,6 +82,16 @@ export class AppComponent implements OnInit {
   }
 
   protected readonly document = document;
+
+  getScoreText() {
+    if (this.score >= 30) {
+      return "You sure know your blondies :)";
+    } else if (this.score >= 10) {
+      return "Not bad — you can totally tell a Thor from a Sue :)";
+    } else {
+      return "They should do something with it :("
+    }
+  }
 }
 
 
